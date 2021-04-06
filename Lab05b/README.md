@@ -1,6 +1,6 @@
-## CS102 - Lab05
+## CS102 - Lab05b
 
-An attempt to perform Lab05 for the CS102 course. Instructions for the lab can be found in the "CS102_Lab05.pdf" file located in the root directory of the repository.
+An attempt to perform Lab05b for the CS102 course. Instructions for the lab can be found in the "CS102_Lab05b.pdf" file located in the root directory of the repository.
 
 ## Folder Structure
 

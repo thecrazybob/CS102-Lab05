@@ -1,5 +1,14 @@
-import javax.swing.*;
+/**
+ * Instructions for Lab05 are in CS102_Lab05.pdf file located in the root
+ * directory of Lab05 Revisions can be seen on the following GitHub URL:
+ * https://github.com/thecrazybob/CS102-lab05 Style Guidelines:
+ * http://www.cs.bilkent.edu.tr/~adayanik/cs101/practicalwork/styleguidelines.htm
+ *
+ * @author Mohammed Sohail
+ * @version 31/03/2021
+ */
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.util.*;
@@ -124,6 +133,9 @@ public class PotLuck {
         frame.add(grid, BorderLayout.CENTER);
     }
 
+    /**
+     * Initializes the board with buttons, bombs and prize(s)
+     */
     public void initializeBoard() {
 
         // Map all (row, col) pairs to unique integers
@@ -161,6 +173,9 @@ public class PotLuck {
 
     }
 
+    /**
+     * Resets the game
+     */
     private void reset() {
 
         for (int row = 0; row < GRIDSIZE; row++) {
@@ -175,10 +190,20 @@ public class PotLuck {
 
     }
 
+    
+    /** 
+     * Determines if the user has exceeded the maximum limit of tries
+     * @return boolean
+     */
     private boolean isLimitExceeded() {
         return attempts >= MAXATTEMPTS - 1;
     }
 
+    
+    /** 
+     * Handles the status bar at the bottom of the GUI
+     * @param code
+     */
     private void updateStatus(int code) {
         /*
          1: won
@@ -196,6 +221,11 @@ public class PotLuck {
         }
     }
     
+    
+    /** 
+     * Handles user click on a button
+     * @param cell
+     */
     private void handleClick(PotButton cell) {
 
         if (!isLimitExceeded()) {
@@ -236,6 +266,12 @@ public class PotLuck {
     
     }
 
+    
+    /** 
+     * Helper method to show message to user
+     * @param message
+     * @param result
+     */
     private void announce(String message, int result) {
         if (result == 1) {
             JOptionPane.showMessageDialog(

@@ -1,19 +1,29 @@
+/**
+ * Instructions for Lab05 are in CS102_Lab05.pdf file located in the root
+ * directory of Lab05 Revisions can be seen on the following GitHub URL:
+ * https://github.com/thecrazybob/CS102-lab05 Style Guidelines:
+ * http://www.cs.bilkent.edu.tr/~adayanik/cs101/practicalwork/styleguidelines.htm
+ *
+ * @author Mohammed Sohail
+ * @version 31/03/2021
+ */
+
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.plaf.FontUIResource;
 import java.awt.event.ActionListener;
-
 public class PotButton extends JButton {
 
-    /**
-     *
-     */
+    // constants
     private static final long serialVersionUID = 1L;
     private final int col;
     private final int row;
+
+    // variables
     private boolean gameFinished;
     private String type;
 
+    // constructor
     PotButton(final int row, final int col, final ActionListener actionListener, int text) {
         this.col = col;
         this.row = col;
@@ -21,14 +31,27 @@ public class PotButton extends JButton {
         setText(text + "");
     }
 
+    
+    /** 
+     * Returns the type of button (bomb/prize)
+     * @return String
+     */
     public String getType() {
         return this.type;
     }
 
+    
+    /** 
+     * Sets the type of the button (bomb/prize)
+     * @param type
+     */
     public void setType(String type) {
         this.type = type;
     }
 
+    /**
+     * Reveals the contents of the button
+     */
     void reveal() {
         setEnabled(false);
         if (type == "bomb") {
@@ -53,6 +76,11 @@ public class PotButton extends JButton {
         setForeground(Color.BLACK);
     }
 
+    
+    /** 
+     * Overrides the paintComponent method to show a bomb icon on reveal for bomb type buttons
+     * @param g
+     */
     @Override
     public void paintComponent(Graphics g) {
         
