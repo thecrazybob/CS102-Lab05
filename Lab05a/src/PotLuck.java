@@ -5,7 +5,8 @@ import java.awt.event.ActionListener;
 import java.util.*;
 
 /**
- * TODO: Bomb and star icon
+ * TODO: Bomb icon
+ * TODO: Part (b)
  * PotLuck
  */
 public class PotLuck {

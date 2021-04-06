@@ -1,7 +1,6 @@
-import javax.swing.JButton;
+import java.awt.*;
+import javax.swing.*;
 import javax.swing.plaf.FontUIResource;
-
-import java.awt.Color;
 import java.awt.event.ActionListener;
 
 public class PotButton extends JButton {
@@ -30,6 +29,7 @@ public class PotButton extends JButton {
         if (type == "bomb") {
             setText(type);
         }
+        
         else if (type == "prize") {
             setText("\u2605");
             setFont(new FontUIResource("Arial", FontUIResource.PLAIN, 40));
