@@ -53,9 +53,12 @@ public class PotButton extends JButton {
      * Reveals the contents of the button
      */
     void reveal() {
+        
         setEnabled(false);
+
         if (type == "bomb") {
             setText(type);
+            setEnabled(true);
         }
         
         else if (type == "prize") {
